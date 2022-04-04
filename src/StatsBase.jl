@@ -28,7 +28,7 @@ import StatsAPI: pairwise, pairwise!, params, params!,
                  deviance, islinear, nulldeviance, loglikelihood, nullloglikelihood,
                  loglikelihood, loglikelihood, score, nobs, dof, mss, rss,
                  informationmatrix, stderror, vcov, weights, isfitted, fit, fit!,
-                 aic, aicc, bic, r2, r², adjr2
+                 aic, aicc, bic, r2, r², adjr2, adjr²
 
     ## tackle compatibility issues
 
@@ -81,8 +81,10 @@ export
     zscore,      # compute Z-scores
     zscore!,     # compute Z-scores inplace or to a pre-allocated array
 
-    percentile,  # quantile using percentage (instead of fraction) as argument
-    nquantile,   # quantiles at [0:n]/n
+    percentile,     # quantile using percentage (instead of fraction) as argument
+    nquantile,      # quantiles at [0:n]/n
+    quantilerank,   # quantile-position (0-1) of a value relative to a collection
+    percentilerank, # percentile-position (0-100) of a value relative to a collection
 
     span,        # The range minimum(x):maximum(x)
     variation,   # ratio of standard deviation to mean
